@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Christine Sharper Portfolio</title>
+<meta name="description" content="Christine Sharper, Interaction Designer and Professional Writer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&family=Momo+Trust+Display&family=Solway:wght@700&family=Niramit:wght@500&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f8f8f8;
+  --card:#ebf6e6;
+  --hero:#c3e5b5;
+  --btn:#446536;
+  --btn-hover:#5a8748;
+  --btn-text:#ebf6e6;
+  --title:#446536;
+  --name:#5a8748;
+  --body:#162112;
+  --footer-cw:#2d4324;
+  --muted:#909090;
+  --title-font:'Momo Trust Display', 'LINE Seed JP', system-ui, sans-serif;
+  --body-font:'LINE Seed JP', system-ui, sans-serif;
+  --gutter:120px;
+  --maxw:1440px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--body-font);font-size:18px;line-height:32px;letter-spacing:.04em;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+
+/* Header */
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);filter:drop-shadow(0 2px 4px rgba(0,0,0,.16))}
+.header .bar{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:24px;height:72px}
+.brand{font-family:var(--title-font);font-size:20px;line-height:24px;color:var(--name);text-decoration:none;letter-spacing:0}
+.tabs{display:flex;gap:40px;align-items:center}
+.tabs a{font-size:16px;line-height:24px;letter-spacing:.04em;color:var(--body);text-decoration:underline;text-decoration-color:transparent;text-underline-offset:5px;text-decoration-thickness:1px;transition:text-decoration-color .2s}
+.tabs a:hover,.tabs a:focus-visible,.tabs a[aria-current="page"]{text-decoration-color:currentColor}
+.menu-btn{display:none;background:none;border:0;padding:8px;cursor:pointer;color:var(--body)}
+
+/* Pages */
+.page{display:none}
+.page.active{display:block}
+
+/* Shared type */
+.title{font-family:var(--title-font);font-size:32px;line-height:40px;color:var(--title);letter-spacing:0;font-weight:400}
+.subtitle{font-size:24px;line-height:32px;letter-spacing:.04em;font-weight:400;color:#000}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--btn);color:var(--btn-text);font-weight:700;font-size:16px;line-height:24px;letter-spacing:.04em;text-decoration:none;border-radius:8px;padding:16px 24px;transition:background-color .2s}
+.btn:hover,.btn:focus-visible{background:var(--btn-hover)}
+.tag{background:var(--btn);color:var(--btn-text);font-weight:700;font-size:16px;line-height:24px;letter-spacing:.04em;border-radius:8px;padding:8px 16px;white-space:nowrap;transition:background-color .2s}
+
+/* Home hero */
+.hero{position:relative;min-height:1024px;background:#b7dea7;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.mesh-anim{position:absolute;inset:0;container-type:size;overflow:hidden;pointer-events:none}
+.mesh-anim::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(218,236,214,0) 78%,rgba(218,236,214,.85) 91%,var(--bg) 100%)}
+.blob{position:absolute;left:0;top:0;width:var(--s);aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgb(var(--c)),rgba(var(--c),.8) 35%,rgba(var(--c),.35) 65%,rgba(var(--c),0));will-change:transform;animation:var(--k) 10s ease-in-out infinite;transform:var(--t0)}
+@media (prefers-reduced-motion: reduce){.blob{animation:none}}
+.blob-a{--c:146,208,122;--s:58cqmax;--k:drift-a;--t0:translate(calc(57.1cqw - 50%),calc(46.7cqh - 50%))}
+@keyframes drift-a{0%,100%{transform:translate(calc(57.1cqw - 50%),calc(46.7cqh - 50%))}33%{transform:translate(calc(52.2cqw - 50%),calc(32.1cqh - 50%))}66%{transform:translate(calc(36.2cqw - 50%),calc(10.1cqh - 50%))}}
+.blob-b{--c:103,209,139;--s:52cqmax;--k:drift-b;--t0:translate(calc(86.9cqw - 50%),calc(18.9cqh - 50%))}
+@keyframes drift-b{0%,100%{transform:translate(calc(86.9cqw - 50%),calc(18.9cqh - 50%))}33%{transform:translate(calc(99.5cqw - 50%),calc(54.0cqh - 50%))}66%{transform:translate(calc(60.9cqw - 50%),calc(42.3cqh - 50%))}}
+.blob-c{--c:162,217,142;--s:52cqmax;--k:drift-c;--t0:translate(calc(21.1cqw - 50%),calc(63.3cqh - 50%))}
+@keyframes drift-c{0%,100%{transform:translate(calc(21.1cqw - 50%),calc(63.3cqh - 50%))}33%{transform:translate(calc(15.4cqw - 50%),calc(46.5cqh - 50%))}66%{transform:translate(calc(24.2cqw - 50%),calc(54.6cqh - 50%))}}
+.blob-d{--c:168,224,184;--s:54cqmax;--k:drift-d;--t0:translate(calc(81.6cqw - 50%),calc(79.2cqh - 50%))}
+@keyframes drift-d{0%,100%{transform:translate(calc(81.6cqw - 50%),calc(79.2cqh - 50%))}33%{transform:translate(calc(50.4cqw - 50%),calc(74.1cqh - 50%))}66%{transform:translate(calc(3.0cqw - 50%),calc(74.1cqh - 50%))}}
+.blob-e{--c:141,227,176;--s:40cqmax;--k:drift-e;--t0:translate(calc(96.5cqw - 50%),calc(11.9cqh - 50%))}
+@keyframes drift-e{0%,100%{transform:translate(calc(96.5cqw - 50%),calc(11.9cqh - 50%))}33%{transform:translate(calc(75.7cqw - 50%),calc(0.2cqh - 50%))}66%{transform:translate(calc(92.8cqw - 50%),calc(21.5cqh - 50%))}}
+.blob-f{--c:172,222,170;--s:40cqmax;--k:drift-f;--t0:translate(calc(6.5cqw - 50%),calc(84.3cqh - 50%))}
+@keyframes drift-f{0%,100%{transform:translate(calc(6.5cqw - 50%),calc(84.3cqh - 50%))}33%{transform:translate(calc(11.9cqw - 50%),calc(78.3cqh - 50%))}66%{transform:translate(calc(35.9cqw - 50%),calc(87.3cqh - 50%))}}
+.hero-info{position:relative;max-width:808px;padding:0 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:40px}
+.hero-info .name{font-family:var(--title-font);font-size:32px;line-height:40px;color:var(--title);text-decoration:underline;text-decoration-thickness:6%;text-underline-offset:4px;margin-top:16px;letter-spacing:0}
+
+/* Project cards */
+.work{padding:80px 0;display:flex;flex-direction:column;gap:40px;scroll-margin-top:72px}
+.card{display:flex;align-items:stretch;background:var(--card);border-radius:16px;text-decoration:none;color:inherit;transition:transform .25s ease, box-shadow .25s ease}
+.card:hover,.card:focus-visible{transform:translateY(-3px);box-shadow:0 10px 24px -8px rgba(68,101,54,.28)}
+@media (prefers-reduced-motion: reduce){.card{transition:box-shadow .25s ease}.card:hover,.card:focus-visible{transform:none}}
+.card .left,.card .info p{transition:opacity .2s, color .2s}
+.card:hover .tag,.card:hover .view,.card:focus-visible .tag,.card:focus-visible .view{background:var(--btn-hover)}
+.card:hover .left,.card:focus-visible .left{opacity:.8}
+.card:hover .info p,.card:focus-visible .info p{color:var(--footer-cw)}
+.card .left{padding:40px;flex:0 0 auto}
+.card .left img{width:472px;height:352px;object-fit:cover}
+.card .right{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;gap:32px}
+.card .info{display:flex;flex-direction:column;gap:24px;padding-right:40px;width:100%}
+.card .tags{display:flex;flex-wrap:wrap;gap:16px}
+.card .view{background:var(--btn);color:var(--btn-text);font-weight:700;font-size:18px;line-height:18px;letter-spacing:.04em;padding:24px;border-radius:16px 0 16px 0;transition:background-color .2s}
+
+/* Footer */
+.footer{background:var(--card)}
+.footer .inner{max-width:var(--maxw);margin:0 auto;padding:64px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:40px}
+.footer .left{display:flex;flex-direction:column;gap:72px;max-width:502px}
+.footer .stmt{font-weight:700;font-size:16px;line-height:24px;margin-top:24px}
+.footer .copy{font-size:16px;line-height:24px;color:var(--footer-cw)}
+.footer .cols{display:flex;gap:40px;font-size:16px;line-height:24px}
+.footer .col{display:flex;flex-direction:column;gap:16px;min-width:97px}
+.footer .col h4{margin:0 0 8px;font-size:16px;line-height:24px;font-weight:700;letter-spacing:.04em}
+.footer .col a{text-decoration:underline;text-decoration-color:transparent;text-underline-offset:5px;text-decoration-thickness:1px;transition:text-decoration-color .2s}
+.footer .col a:hover,.footer .col a:focus-visible{text-decoration-color:currentColor}
+.footer .col.contact a{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.footer .addr{font-size:14px;color:var(--footer-cw);user-select:all;margin-top:-8px}
+.connect-addr{font-size:18px;color:var(--title);margin-top:-56px;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.connect-addr:hover{color:var(--btn-hover)}
+
+/* Case study pages */
+.cs-hero{background:linear-gradient(to bottom,var(--hero) 89.9%,var(--bg));padding:64px 16px;display:flex;justify-content:center;overflow:hidden}
+.phones{position:relative;width:100%;max-width:1072px;aspect-ratio:1072/774}
+.phones img{position:absolute;width:30.6%;aspect-ratio:328/679;object-fit:cover;box-shadow:4px 4px 4px rgba(22,33,18,.25);border-radius:12px}
+.phones .p-top{left:34.7%;top:0;z-index:2}
+.phones .p-l{left:0;bottom:0}
+.phones .p-r{right:0;bottom:0}
+.feline-hero{width:100%;max-width:1081px}
+.reel-hero{width:100%;max-width:1080px}
+.cs-body{padding:80px 0;display:flex;flex-direction:column;gap:40px}
+.details{background:var(--card);border-radius:8px;padding:40px 112px;display:flex;justify-content:space-between;gap:24px;text-align:center}
+.details b{display:block;font-size:24px;line-height:32px;margin-bottom:8px}
+.cs-body > p{color:#000}
+.cs-body b{font-weight:700}
+.spacer{height:32px}
+.sol{background:var(--card);border-radius:16px;padding:40px;display:flex;flex-wrap:wrap;gap:24px;align-items:center}
+.sol img{width:256px;aspect-ratio:256/555;object-fit:cover;border-radius:16px;flex:0 0 auto}
+.sol p{flex:1 1 220px;color:var(--title);font-weight:700}
+.sol.end{justify-content:flex-end}
+.panel{background:var(--card);border-radius:8px;padding:40px;display:flex;flex-direction:column;align-items:center;gap:24px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;width:100%}
+.two > div{display:flex;flex-direction:column;gap:24px}
+.two h5{margin:0;font-size:18px;line-height:32px;font-weight:700;text-align:center;color:#000}
+.mb{border:1px solid #282828;border-radius:4px;width:100%;aspect-ratio:536/301.5;object-fit:cover;object-position:top}
+.two > .pal,.pal{display:grid;flex-direction:unset;grid-template-columns:1fr 1fr;gap:16px;align-content:start}
+.sw{height:108px;border-radius:8px;padding:16px;display:flex;flex-direction:column;justify-content:flex-end;font-size:16px;line-height:1.5;letter-spacing:.04em;font-weight:700}
+.sw.ww{font-family:'Solway',serif}
+.sw.fl{font-family:'Outfit',sans-serif}
+.sw.bd{border:1px solid #343340}
+.type{display:grid;grid-template-columns:1fr 1fr;gap:40px;width:100%}
+.type > div{background:#fcfcff;border:1px solid #343340;border-radius:16px;padding:24px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.type small{display:block;font-size:18px;line-height:32px;color:var(--muted)}
+.landing{display:grid;grid-template-columns:1fr 1fr;gap:40px;width:100%;align-items:start}
+.posts{display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;width:100%;padding-right:144px}
+.posts .grp{display:flex;gap:32px;flex-wrap:wrap}
+.posts img{width:256px;aspect-ratio:256/374;object-fit:cover;border-radius:8px}
+
+/* About */
+.about{padding:80px 0;display:flex;flex-direction:column;align-items:center;gap:80px}
+.intro{display:flex;gap:80px;align-items:center;padding:8px;width:100%}
+.intro img{width:270px;aspect-ratio:270/406;object-fit:cover;border-radius:16px;flex:0 0 auto}
+.intro .txt{display:flex;flex-direction:column;gap:40px;color:var(--title)}
+.intro .txt p + p{margin-top:32px}
+.hobbies{width:100%;display:flex;flex-direction:column;align-items:center;gap:40px}
+.hobbies .row{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;width:100%}
+.hobbies figure{margin:0;display:flex;flex-direction:column;gap:40px}
+.hobbies figure img{width:100%;height:240px;object-fit:cover;border-radius:16px}
+.hobbies figcaption{font-size:24px;line-height:32px;color:var(--title);text-align:center}
+.gallery{width:100%;max-width:1260px;display:flex;flex-direction:column;gap:36px}
+.gallery .r{display:flex;gap:36px}
+.gallery img{height:auto;object-fit:cover;min-width:0}
+.connect{font-weight:800;font-size:64px;line-height:1.5;letter-spacing:.04em;color:var(--title);text-decoration:none;text-align:center}
+.connect:hover{opacity:.85}
+
+/* Responsive */
+@media (max-width:1200px){
+  :root{--gutter:48px}
+  .card .left img{width:360px;height:268px}
+  .details{padding:32px 48px}
+  .posts{padding-right:0}
+}
+@media (max-width:900px){
+  .card{flex-direction:column}
+  .card .left{padding:24px 24px 0}
+  .card .left img{width:100%;height:auto;aspect-ratio:472/352}
+  .card .info{padding:24px 24px 0}
+  .two,.type,.landing{grid-template-columns:1fr}
+  .intro{flex-direction:column;gap:40px}
+  .hobbies .row{grid-template-columns:1fr}
+  .footer .inner{flex-direction:column;align-items:flex-start}
+  .footer .left{gap:32px}
+  .gallery .r{flex-wrap:wrap}
+  .gallery .r img{flex-basis:100% !important;width:100%}
+  .sol img{width:calc(50% - 12px)}
+  .connect{font-size:44px}
+}
+@media (max-width:640px){
+  :root{--gutter:16px}
+  body{font-size:16px;line-height:28px}
+  .tabs{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--card);padding:8px 16px 16px}
+  .tabs.open{display:flex}
+  .tabs a{padding:12px 0;width:100%}
+  .menu-btn{display:block}
+  .header .bar{padding:16px}
+  .hero{min-height:88vh}
+  .hero-info{gap:28px}
+  .title{font-size:28px;line-height:36px}
+  .details{flex-direction:column;padding:24px}
+  .sol{padding:20px;gap:16px}
+  .sol img{width:calc(50% - 8px)}
+  .sol p{flex-basis:100%}
+  .panel{padding:20px}
+  .posts img{width:calc(50% - 16px)}
+  .posts .grp{width:100%}
+  .cs-hero{padding:32px 16px}
+  .cs-body,.work,.about{padding:48px 0}
+  .connect{font-size:36px}
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="bar">
+    <a class="brand" href="#home">Christine Sharper</a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" id="menuBtn">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="tabs" id="tabs">
+      <a href="#home" data-route="home">Home</a>
+      <a href="#work" data-route="work">My Work</a>
+      <a href="#about" data-route="about">About Me</a>
+      <a href="Christine-Sharper-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<section class="page" id="page-home">
+  <div class="hero">
+    <div class="mesh-anim" aria-hidden="true"><span class="blob blob-a"></span><span class="blob blob-b"></span><span class="blob blob-c"></span><span class="blob blob-d"></span><span class="blob blob-e"></span><span class="blob blob-f"></span></div>
+    <div class="hero-info">
+      <div>
+        <p>Hello, I’m</p>
+        <p class="name">Christine Sharper</p>
+      </div>
+      <p>I’m an Interaction Designer and Professional Writer.<br>I Design Thoughtful, Human-centered Experiences.<br>My work blends clarity with comfort and storytelling.</p>
+      <a class="btn" href="#work">Explore My Design Work</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="work" id="work-list">
+      <a class="card" href="#reel">
+        <div class="left"><img src="img/card-reel.jpg" alt="REEL app screens on three phones"></div>
+        <div class="right">
+          <div class="info">
+            <h2 class="title" style="margin:0">REEL</h2>
+            <div class="tags"><span class="tag">High-Fi Prototype</span><span class="tag">Research</span><span class="tag">UX</span></div>
+            <p>Developing a user-centered design solution for REEL, a media review platform.</p>
+          </div>
+          <span class="view">View</span>
+        </div>
+      </a>
+      <a class="card" href="#feline">
+        <div class="left"><img src="img/card-feline.jpg" alt="Whisker Wardrobe and FELINE social media posts"></div>
+        <div class="right">
+          <div class="info">
+            <h2 class="title" style="margin:0">Feline / Whisker Wardrobe</h2>
+            <div class="tags"><span class="tag">Branding</span><span class="tag">Visual Design</span><span class="tag">UI</span></div>
+            <p>Designing social media posts and landing pages for two cat companies.</p>
+          </div>
+          <span class="view">View</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- REEL -->
+<section class="page" id="page-reel">
+  <div class="cs-hero">
+    <img class="reel-hero" src="img/reel-hero.webp" alt="REEL explore, media and bookmark screens on three phones">
+  </div>
+  <div class="wrap">
+    <div class="cs-body">
+      <h1 class="title" style="margin:0">REEL</h1>
+      <div class="details">
+        <div><b>Role:</b>Team Lead</div>
+        <div><b>Timeline:</b>August - November 2025</div>
+        <div><b>Tools:</b>Figma, Figjam</div>
+      </div>
+      <h2 class="subtitle" style="margin:0">Introduction</h2>
+      <div>
+        <p><b>Film lovers don’t have to feel alone in their interests.</b> REEL is a mobile prototype designed to connect movie and TV watchers through unprecedented features compared to its competitors. Leading a team of three through the class's Goal-Directed Design method, we: conducted user interviews, completed exercises in affinity mapping, created personas, built wireframes, and conducted usability tests, resulting in a full prototype.</p>
+        <div class="spacer"></div>
+        <p>My personal responsibilities as team lead consisted of task delegation; facilitating interviews and usability testing, managing consent forms, taking meeting notes; scheduling meeting times; handing in deliverables; and fostering team connection while keeping us focused on the end goal.</p>
+      </div>
+      <h2 class="subtitle" style="margin:0">Problem</h2>
+      <p>The current state of <b>movie review platforms</b> has focused primarily on ranking, rating, and leaving comments about media <b>without emphasis on live interaction</b> between people with similar media interests. What existing products/services fail to address is the <b>need for connection</b> through community engagement.</p>
+      <h2 class="subtitle" style="margin:0">Solutions</h2>
+      <div class="sol">
+        <img src="img/reel-explore1.jpg" alt="REEL social feed">
+        <img src="img/reel-explore2.jpg" alt="REEL social feed, reviews">
+        <p>The foundation: a social feed for discovering and sharing movie and TV ratings and reviews.</p>
+      </div>
+      <div class="sol">
+        <img src="img/reel-explore3.jpg" alt="REEL explore categories">
+        <p>A section for users to discover media more easily through organized categories.<br><br>Media pages with clean UI and reccomendations.</p>
+        <img src="img/reel-superman1.jpg" alt="REEL media page">
+        <img src="img/reel-superman2.jpg" alt="REEL media page, details">
+      </div>
+      <div class="sol">
+        <img src="img/reel-bookmarks.jpg" alt="REEL bookmarks">
+        <img src="img/reel-list.jpg" alt="REEL custom list">
+        <p>Users have the ability to organize and revisit media using bookmarks and custom lists.</p>
+        <img src="img/reel-ayo.jpg" alt="REEL list detail">
+      </div>
+      <div class="sol end">
+        <p>Direct messages and review replies enable users to connect and discuss shared interests in real time.</p>
+        <img src="img/reel-dm.jpg" alt="REEL direct messages">
+        <img src="img/reel-reply.jpg" alt="REEL review replies">
+      </div>
+      <h2 class="subtitle" style="margin:0">Lessons Learned</h2>
+      <p>This project allowed me to reflect on my visual design consistency in practice — I learned that applying appropriate spacing, margins, and design patterns across the product is what takes something from a flat draft to a true prototype. I also learned the importance of usability testing and how user feedback can reveal issues that may not be obvious during the design process. As team lead, I developed stronger task delegation and collaboration skills. Effective communication and my consistent efforts towards team bonding contributed to a more productive workflow.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FELINE / WHISKER WARDROBE -->
+<section class="page" id="page-feline">
+  <div class="cs-hero">
+    <img class="feline-hero" src="img/feline-hero.webp" alt="Whisker Wardrobe and FELINE landing pages on laptops with social posts">
+  </div>
+  <div class="wrap">
+    <div class="cs-body">
+      <h1 class="title" style="margin:0">Feline / Whisker Wardrobe</h1>
+      <p style="font-weight:700;font-size:24px;line-height:32px">Branding and Visual Design for Two Cat‑Focused Companies</p>
+      <div class="details">
+        <div><b>Role:</b>Solo Project</div>
+        <div><b>Timeline:</b>1 week</div>
+        <div><b>Tools:</b>Figma</div>
+      </div>
+      <h2 class="subtitle" style="margin:0">Introduction</h2>
+      <p>A brand’s <b>personality</b> directly influences how its <b>visual identity</b> comes together. I designed landing pages and accompanying social media posts for two fictional cat companies. Whisker Wardrobe is playful, bold, exciting, vibrant; FELINE is clean, modern, premium, sleek. My goal was to build <b>two distinct visual systems</b> that express each brand’s personality through color, typography, layout, and imagery.</p>
+      <h2 class="subtitle" style="margin:0">Developing Brand Directions</h2>
+      <p>I designed Whisker Wardrobe to have a few bright and energetic colors that I could use together to create an inviting and playful <b>atmosphere</b> for the brand. I chose a grounded lime green to represent loyalty, orange to represent enthusiasm and freedom (freedom of expression), and bright purple for art and the imagination put into the products’ designs. In contrast, I knew I wanted FELINE to be represented by a deep, navy-blue-leaning color, which would represent <b>elevated and thoughtful clothing design</b>. I chose a lighter, soft blue to compliment it. That, along with white, is used to highlight smaller but important details and represents peace (peace of mind, for the safety and comfort of customers’ cats).</p>
+
+      <div class="panel">
+        <p style="color:#000">Moodboards &amp; Color Palettes</p>
+        <div class="two">
+          <div><h5>Whisker Wardobe</h5><img class="mb" src="img/ww-moodboard.jpg" alt="Whisker Wardrobe moodboard"></div>
+          <div><h5>FELINE</h5><img class="mb" src="img/fl-moodboard.jpg" alt="FELINE moodboard"></div>
+        </div>
+        <div class="two">
+          <div class="pal">
+            <div class="sw ww" style="background:#343340;color:#f3f8e2">Button Black<br>#343340</div>
+            <div class="sw ww bd" style="background:#fcfcff;color:#92a924">Whisker White<br>#FCFCFF</div>
+            <div class="sw ww" style="background:#92a924;color:#f6e2f8">Catnip Green<br>#92A924</div>
+            <div class="sw ww bd" style="background:#f3f8e2;color:#92a924">Pale Green<br>#F3F8E2</div>
+            <div class="sw ww" style="background:#ae5db1;color:#f3f8e2">Playtime Purple<br>#AE5DB1</div>
+            <div class="sw ww bd" style="background:#f6e2f8;color:#ae5db1">Pale Purple<br>#F6E2F8</div>
+            <div class="sw ww" style="background:#e7992c;color:#f8eee2">Tabby Orange<br>#E7992C</div>
+            <div class="sw ww bd" style="background:#f8eee2;color:#e7992c">Pale Orange<br>#F8EEE2</div>
+          </div>
+          <div class="pal">
+            <div class="sw fl" style="background:#343340;color:#fcfcff">Studio Black<br>#343340</div>
+            <div class="sw fl bd" style="background:#fcfcff;color:#301b86">Clean White<br>#FCFCFF</div>
+            <div class="sw fl" style="background:#301b86;color:#fcfcff">Best-Dressed Blue<br>#301B86</div>
+            <div class="sw fl" style="background:#a4beff;color:#301b86">Baby Blue<br>#A4BEFF</div>
+          </div>
+        </div>
+        <p style="color:#000">Typography</p>
+        <div class="type">
+          <div>
+            <div><span style="font-family:'Solway',serif;font-weight:700;font-size:32px;line-height:40px;color:#92a924;letter-spacing:0">Whisker Wardrobe</span><small>Solway / Bold</small></div>
+            <div><span style="font-family:'Niramit',sans-serif;font-weight:500;font-size:28px;line-height:32px;color:#e7992c;letter-spacing:0">Purrfectly Pattered Pairs</span><small>Niramit / Medium</small></div>
+          </div>
+          <div>
+            <div><span style="font-family:'Outfit',sans-serif;font-weight:900;font-size:32px;line-height:40px;color:#301b86;letter-spacing:0">FELINE</span><small>Outfit / Black</small></div>
+            <div><span style="font-family:'Outfit',sans-serif;font-weight:400;font-size:28px;line-height:32px;color:#a4beff;letter-spacing:0">Your Cat Matters</span><small>Outfit / Regular</small></div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="subtitle" style="margin:0">Final Deliverables</h2>
+      <div>
+        <p>The final product resulted in two carefully crafted brand experiences as seen in each of their landing pages and social media posts. I also designed my own vector icons for each brand.</p>
+        <div class="spacer"></div>
+        <p>Whisker Wardrobe is a cat clothing company specializing in colorful and whimsical hats. To reflect the playful nature of the products, I created a <b>vibrant</b> visual identity using bright colors and friendly typography while still maintaining <b>clear visual hierarchy</b> throughout the website and social media assets. Through asymmetrical compositions, varied shapes, and playful alignment choices, I aimed to create a brand experience that feels creative, energetic, and approachable.</p>
+        <div class="spacer"></div>
+        <p>FELINE is a cat apparel brand focused on comfortable, curated clothing collections. I developed a clean and <b>minimalist</b> visual identity by emphasizing <b>symmetry</b>, consistency, and clear visual hierarchy to create a balanced user experience. The resulting brand feels modern and organized while highlighting the comfort and quality of the products.</p>
+      </div>
+      <div class="panel" style="gap:32px">
+        <p style="color:#000">Landing Pages</p>
+        <div class="landing">
+          <img src="img/ww-landing.jpg" alt="Whisker Wardrobe landing page">
+          <img src="img/fl-landing.jpg" alt="FELINE landing page">
+        </div>
+        <p style="color:#000">Social Media Posts</p>
+        <div class="posts">
+          <div class="grp">
+            <img src="img/ww-post1.jpg" alt="Whisker Wardrobe post">
+            <img src="img/ww-post2.jpg" alt="Whisker Wardrobe limited-time post">
+          </div>
+          <img src="img/fl-post.jpg" alt="FELINE post">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="page" id="page-about">
+  <div class="wrap">
+    <div class="about">
+      <div class="intro">
+        <img src="img/about-me.jpg" alt="Christine Sharper">
+        <div class="txt">
+          <h1 class="title" style="margin:0">Hi Again, I’m Christine!</h1>
+          <div>
+            <p>I’m a senior at Kennesaw State University studying Interaction Design and Professional Writing.</p>
+            <p>I most enjoy designing for hobbyists - people who enjoy things like reading books or traveling. I’m passionate about finding solutions for passionate people.</p>
+            <p>I studied poetry and culture abroad in Scotland in the summer of 2026, and I had the best time! I explored Edinburgh and Glasgow while writing and immersing myself in storytelling, Shakespeare, sonnets, and Scottish Folklore.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hobbies">
+        <h2 class="title" style="margin:0">I’m a designer and:</h2>
+        <div class="row">
+          <figure><img src="img/about-poetry.jpg" alt="A handwritten poem"><figcaption>A Poet</figcaption></figure>
+          <figure><img src="img/about-photo.jpg" alt="Daisies"><figcaption>A Self-Proclaimed Photographer</figcaption></figure>
+          <figure><img src="img/about-movies.jpg" alt="Movie poster"><figcaption>A Music and Movie Enthisuast</figcaption></figure>
+        </div>
+      </div>
+      <div class="hobbies">
+        <h2 class="title" style="margin:0">Photo Gallery</h2>
+        <div class="gallery" id="gallery">
+          <div class="r">
+            <img src="img/g17.jpg" style="flex:272" alt="Fireworks">
+            <img src="img/g13.jpg" style="flex:643" alt="Brick building">
+            <img src="img/g22.jpg" style="flex:272" alt="Brick tower against blue sky">
+          </div>
+          <div class="r">
+            <img src="img/g-ducks3.jpg" style="flex:683" alt="Ducklings on a pond">
+            <img src="img/g-ducks2.jpg" style="flex:216" alt="Ducks on a pond">
+            <img src="img/g18.jpg" style="flex:289" alt="Mushrooms in grass">
+          </div>
+          <div class="r">
+            <img src="img/g-swans.jpg" style="flex:611" alt="Swans and ducks on the bank">
+            <img src="img/g14.jpg" style="flex:613" alt="Moon through branches">
+          </div>
+          <div class="r">
+            <img src="img/g19.jpg" style="flex:432" alt="Daisies">
+            <img src="img/g20.jpg" style="flex:432" alt="Yellow flowers in front of a tower">
+            <img src="img/g15.jpg" style="flex:325" alt="Basketball hoop through bare branches">
+          </div>
+          <div class="r">
+            <img src="img/g21.jpg" style="flex:612" alt="Propane tank in a wooded yard">
+            <img src="img/g-fence.jpg" style="flex:612" alt="Broken fence in greenery">
+          </div>
+        </div>
+      </div>
+      <a class="connect" href="https://www.linkedin.com/in/christine-sharper-8b0384254/" target="_blank" rel="noopener">Let’s Connect!</a>
+      <a class="connect-addr" href="mailto:chrisisharper@outlook.com">chrisisharper@outlook.com</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="inner">
+    <div class="left">
+      <div>
+        <a class="brand" href="#home">Christine Sharper</a>
+        <p class="stmt">Let’s build thoughtful experiences together.</p>
+      </div>
+      <p class="copy">@Christine Sharper 2026</p>
+    </div>
+    <div class="cols">
+      <div class="col contact">
+        <h4>Contact</h4>
+        <a href="mailto:chrisisharper@outlook.com">Email</a>
+        <span class="addr">chrisisharper@outlook.com</span>
+        <a href="https://www.linkedin.com/in/christine-sharper-8b0384254/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="col">
+        <h4>Navigation</h4>
+        <a href="#home">Home</a>
+        <a href="#work">My Work</a>
+        <a href="#about">About Me</a>
+        <a href="Christine-Sharper-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var pages={home:'home',work:'home',reel:'reel',feline:'feline',about:'about'};
+  var tabs=document.getElementById('tabs'), btn=document.getElementById('menuBtn');
+  function route(){
+    var r=(location.hash||'').slice(1)||'home';
+    var key=pages[r]||'home';
+    document.querySelectorAll('.page').forEach(function(p){p.classList.toggle('active',p.id==='page-'+key)});
+    document.querySelectorAll('.tabs a[data-route]').forEach(function(a){
+      var d=a.dataset.route;
+      var on=(d==='about'&&key==='about')||(d==='work'&&(key==='reel'||key==='feline'||r==='work'))||(d==='home'&&r==='home');
+      if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+    tabs.classList.remove('open');btn.setAttribute('aria-expanded','false');
+    if(r==='work'){var w=document.getElementById('work-list');requestAnimationFrame(function(){w.scrollIntoView()});}
+    else window.scrollTo({top:0,left:0,behavior:'instant'});
+  }
+  btn.addEventListener('click',function(){var o=tabs.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  window.addEventListener('hashchange',route);
+  route();
+})();
+</script>
+</body>
+</html>
