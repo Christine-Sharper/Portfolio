@@ -164,6 +164,31 @@ p{margin:0}
 .connect:hover{opacity:.85}
 
 /* Responsive */
+.panel-label{font-weight:700;color:var(--title);text-align:center}
+.cj-hero{width:100%;max-width:1112px;aspect-ratio:1112/824;object-fit:contain}
+.cs-body .copy p + p{margin-top:32px}
+.cs-body .copy p.tight + p{margin-top:0}
+.cs-body ul{margin:0;padding-left:27px}
+.cs-body .copy{color:#000}
+.cs-body ul li{margin:0}
+.panel img.wide{width:100%;aspect-ratio:1809/1026;object-fit:cover;object-position:bottom;border-radius:4px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:40px;width:100%;align-items:start}
+.duo > div{display:flex;flex-direction:column;gap:24px;min-width:0}
+.duo img.tall{width:100%;aspect-ratio:540/720;object-fit:cover;border-radius:4px}
+.duo figure{margin:0;display:flex;flex-direction:column}
+.duo figure img{width:100%;aspect-ratio:540/316;object-fit:cover}
+.duo figcaption{color:var(--title);text-align:center}
+.pres-top{display:grid;grid-template-columns:221fr 598fr 221fr;gap:40px;width:100%}
+.pres-top img{width:100%;height:449px;object-fit:cover}
+.pres-bot{display:grid;grid-template-columns:1fr 1fr;gap:40px;width:100%}
+.pres-bot img{width:100%;aspect-ratio:4/3;object-fit:cover}
+@media (max-width:900px){
+  .duo{grid-template-columns:1fr}
+  .pres-top{grid-template-columns:1fr 1fr;gap:16px}
+  .pres-top img{height:auto;aspect-ratio:221/449}
+  .pres-top img.mid{grid-column:1 / -1;order:-1;aspect-ratio:598/449}
+  .pres-bot{grid-template-columns:1fr;gap:16px}
+}
 @media (max-width:1200px){
   :root{--gutter:48px}
   .card .left img{width:360px;height:268px}
@@ -252,6 +277,17 @@ p{margin:0}
           <span class="view">View</span>
         </div>
       </a>
+      <a class="card" href="#civic-jam">
+        <div class="left"><img src="img/card-civic.jpg" alt="Whiteboard of sticky notes and a hand-drawn service map from Civic Jam"></div>
+        <div class="right">
+          <div class="info">
+            <h2 class="title" style="margin:0">Virtual Case Worker Kiosk<br>(Civic Jam - Service Design)</h2>
+            <div class="tags"><span class="tag">Service Design</span><span class="tag">Civic Tech</span><span class="tag">Design Jam</span></div>
+            <p>Designing a service that connects people with the nonprofit resources they need.</p>
+          </div>
+          <span class="view">View</span>
+        </div>
+      </a>
       <a class="card" href="#feline">
         <div class="left"><img src="img/card-feline.jpg" alt="Whisker Wardrobe and FELINE social media posts"></div>
         <div class="right">
@@ -296,7 +332,7 @@ p{margin:0}
       </div>
       <div class="sol">
         <img src="img/reel-explore3.jpg" alt="REEL explore categories">
-        <p>A section for users to discover media more easily through organized categories.<br><br>Media pages with clean UI and reccomendations.</p>
+        <p>A section for users to discover media more easily through organized categories.<br><br>Media pages with clean UI and recommendations.</p>
         <img src="img/reel-superman1.jpg" alt="REEL media page">
         <img src="img/reel-superman2.jpg" alt="REEL media page, details">
       </div>
@@ -337,7 +373,7 @@ p{margin:0}
       <p>I designed Whisker Wardrobe to have a few bright and energetic colors that I could use together to create an inviting and playful <b>atmosphere</b> for the brand. I chose a grounded lime green to represent loyalty, orange to represent enthusiasm and freedom (freedom of expression), and bright purple for art and the imagination put into the products’ designs. In contrast, I knew I wanted FELINE to be represented by a deep, navy-blue-leaning color, which would represent <b>elevated and thoughtful clothing design</b>. I chose a lighter, soft blue to compliment it. That, along with white, is used to highlight smaller but important details and represents peace (peace of mind, for the safety and comfort of customers’ cats).</p>
 
       <div class="panel">
-        <p style="color:#000">Moodboards &amp; Color Palettes</p>
+        <p class="panel-label">Moodboards &amp; Color Palettes</p>
         <div class="two">
           <div><h5>Whisker Wardobe</h5><img class="mb" src="img/ww-moodboard.jpg" alt="Whisker Wardrobe moodboard"></div>
           <div><h5>FELINE</h5><img class="mb" src="img/fl-moodboard.jpg" alt="FELINE moodboard"></div>
@@ -360,7 +396,7 @@ p{margin:0}
             <div class="sw fl" style="background:#a4beff;color:#301b86">Baby Blue<br>#A4BEFF</div>
           </div>
         </div>
-        <p style="color:#000">Typography</p>
+        <p class="panel-label">Typography</p>
         <div class="type">
           <div>
             <div><span style="font-family:'Solway',serif;font-weight:700;font-size:32px;line-height:40px;color:#92a924;letter-spacing:0">Whisker Wardrobe</span><small>Solway / Bold</small></div>
@@ -382,12 +418,12 @@ p{margin:0}
         <p>FELINE is a cat apparel brand focused on comfortable, curated clothing collections. I developed a clean and <b>minimalist</b> visual identity by emphasizing <b>symmetry</b>, consistency, and clear visual hierarchy to create a balanced user experience. The resulting brand feels modern and organized while highlighting the comfort and quality of the products.</p>
       </div>
       <div class="panel" style="gap:32px">
-        <p style="color:#000">Landing Pages</p>
+        <p class="panel-label">Landing Pages</p>
         <div class="landing">
           <img src="img/ww-landing.jpg" alt="Whisker Wardrobe landing page">
           <img src="img/fl-landing.jpg" alt="FELINE landing page">
         </div>
-        <p style="color:#000">Social Media Posts</p>
+        <p class="panel-label">Social Media Posts</p>
         <div class="posts">
           <div class="grp">
             <img src="img/ww-post1.jpg" alt="Whisker Wardrobe post">
@@ -395,6 +431,88 @@ p{margin:0}
           </div>
           <img src="img/fl-post.jpg" alt="FELINE post">
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIVIC JAM -->
+<section class="page" id="page-civic-jam">
+  <div class="cs-hero">
+    <img class="cj-hero" src="img/cj-hero.jpg" alt="Civic Jam team whiteboard with sticky notes">
+  </div>
+  <div class="wrap">
+    <div class="cs-body">
+      <h1 class="title" style="margin:0">Virtual Case-Worker Kiosk</h1>
+      <div class="details">
+        <div><b>Role:</b>Note-Taker, Blueprint and Persona,<br>Presenter</div>
+        <div><b>Timeline:</b>3 days, November 2026</div>
+        <div><b>Tools:</b>Sticky Notes, Whiteboards,<br>Google Slides</div>
+      </div>
+      <h2 class="subtitle" style="margin:0">Introduction</h2>
+      <div class="copy">
+        <p><b>Help often exists; people just don’t know where to find it.</b> At Civic Jam, a three-day service design jam by Service Design Network Atlanta, hosted by Harmonic Design and sponsored by Civic Tech Atlanta, my team of three took on the topic of <b>Nonprofit Involvement</b>. Over the weekend, we: brainstormed civic challenges, interviewed people active in neighborhood organizations, synthesized our findings, created a persona, mapped a user journey and service blueprint, and pitched our final concept, the Virtual Case-Worker Kiosk.</p>
+        <p>My personal responsibilities consisted of taking notes and asking follow-up questions during interviews; building our persona; mapping the service blueprint; and presenting our strategic pitch to the other participants and mentors in the room.</p>
+      </div>
+      <h2 class="subtitle" style="margin:0">Problem</h2>
+      <div class="copy">
+        <p class="tight">People have needs that go unmet, <b>even when services exist to help them</b>. During our interviews with people active in neighborhood organizations, three pain points kept coming up:</p>
+        <ul>
+          <li><b>Lack of knowledge:</b> most people don’t know what nonprofits and services exist</li>
+          <li><b>Lack of access:</b> services are scattered and people may not have the technology, transportation, or trust to reach them</li>
+          <li><b>Lack of collaboration:</b> nonprofits and government offer similar services but rarely coordinate</li>
+        </ul>
+        <p style="margin-top:0">This led us to our guiding question: <b>“How might we create a system to connect people with the services they need?”</b></p>
+      </div>
+      <div class="panel">
+        <p class="panel-label">“How might we create a system to connect people with the services they need?”</p>
+        <img class="wide" src="img/cj-hmw.jpg" alt="Team whiteboard with the How Might We statement">
+      </div>
+      <h2 class="subtitle" style="margin:0">Research and Synthesis</h2>
+      <div class="copy">
+        <p>To understand the story, let’s start from the very beginning. Our process began Friday evening with a brief introduction to service design and a talk by Mariama N’Diaye, followed by rounds of <b>brainstorming</b> across civic topics. Our early board for Nonprofit Involvement already hinted at what we’d be exploring later: <b>“You don’t find it until you need it”.</b></p>
+        <p class="tight">On Saturday, after a talk by Annie Wolaver, we interviewed people active in neighborhood organizations. We learned that <b>services stay hidden</b> unless you already know to look; that <b>people hesitate</b> to approach services they don’t know; and that even government workers often don’t know which nonprofits to refer people to.</p>
+        <p>This was the day we synthesized our research, identified pain points, and came up with our “How Might We...” statement.</p>
+      </div>
+      <div class="panel">
+        <div class="duo">
+          <div><p class="panel-label">Brainstorming</p><img class="tall" src="img/cj-brainstorm.jpg" alt="Brainstorming board for Nonprofit Involvement"></div>
+          <div><p class="panel-label">Interviewing</p><img class="tall" src="img/cj-interview.jpg" alt="Interview notes on sticky notes"></div>
+        </div>
+      </div>
+      <h2 class="subtitle" style="margin:0">Finding Direction</h2>
+      <p>Settling on a solution was definitely the hardest part of the weekend. Some <b>options we explored</b>: a nonprofit directory; a newsletter featuring a “nonprofit of the week”; a 311-style request form; a dating-app style platform that matched users with nonprofits; and a nonprofit fair. Each idea addressed <b>part of the problem</b>, but most still depended on people knowing where to look.</p>
+      <div class="panel">
+        <div class="duo">
+          <div><p class="panel-label">Exploration</p><img class="tall" src="img/cj-explore.jpg" alt="Whiteboard exploring solution ideas"></div>
+          <div><p class="panel-label">Mapping</p>
+            <figure><img src="img/cj-blueprint.jpg" alt="Early service blueprint on a whiteboard"><figcaption>Early Service Blueprint</figcaption></figure>
+            <figure><img src="img/cj-journey.jpg" alt="Refined user journey map with sticky notes"><figcaption>Refined User Journey</figcaption></figure>
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+        <p class="tight">To break through, we switched our focus to <b>creating a persona</b>, Jasmine. After a routine doctor’s visit reveals a chronic condition, she suddenly needs time off work, help with rent, and groceries, with no local support yet. Every call is one more thing to figure out.</p>
+        <p>We <b>mapped her journey</b> from a medical event to accessing help along with touchpoints where she might encounter support. We noticed that people either land in places like hospitals and libraries at the moment of need, or they <b>already visit these places</b> on a regular basis. We also noticed from one interviewee that a case worker is one of the most helpful touchpoints, but there aren’t enough of them to go around. This was when we landed on our concept: <b>a virtual case-worker.</b></p>
+      </div>
+      <h2 class="subtitle" style="margin:0">Solution</h2>
+      <p><b>The Virtual Case-Worker Kiosk</b> is a government initiative that places kiosks in trusted public spaces, such as hospitals, doctor’s offices, libraries, schools, grocery stores, and shelters. The kiosk greets users with <b>“What are you in need of today?”</b> and asks a few simple questions (with presented options/answers so that they don’t have to do the manual labor of coming up with what they need on their own). It then proactively <b>matches them with nonprofits</b> and services that fit their needs and are best equipped to serve them, in a caring, dignified way, like a case manager would. Behind the scenes, a shared database pulls from the government’s list of registered nonprofits, so nonprofit and government services finally appear side by side.</p>
+      <div class="panel">
+        <p class="panel-label">Presentation Time!</p>
+        <div class="pres-top">
+          <img src="img/cj-pres1.jpg" alt="Presentation photo">
+          <img class="mid" src="img/cj-pres2.jpg" alt="Team presenting the Virtual Case-Worker Kiosk">
+          <img src="img/cj-pres3.jpg" alt="Presentation photo">
+        </div>
+        <div class="pres-bot">
+          <img src="img/cj-pres4.jpg" alt="Civic Jam participants during presentations">
+          <img src="img/cj-pres5.jpg" alt="Civic Jam participants during presentations">
+        </div>
+      </div>
+      <h2 class="subtitle" style="margin:0">Lessons Learned</h2>
+      <div class="copy">
+        <p class="tight">Patrick Quattlebaum, CEO of Harmonic Design, said: “If you aren’t making mistakes, you aren’t doing anything interesting.” I experienced this firsthand as we backtracked and wrestled our ideas into a cleaner solution. I learned that the struggle is part of the process, and that our strongest ideas came once we stopped searching for a product and started mapping the moments when people need help.</p>
+        <p>Given more time, I would: address the roadblock of user privacy (and the fact that users might not be comfortable asking for help in public spaces); explore future phases, like an additional app or website for personalized recommendations; explore AI implementation (chat with an AI case manager).</p>
       </div>
     </div>
   </div>
@@ -487,7 +605,7 @@ p{margin:0}
 
 <script>
 (function(){
-  var pages={home:'home',work:'home',reel:'reel',feline:'feline',about:'about'};
+  var pages={home:'home',work:'home',reel:'reel','civic-jam':'civic-jam',feline:'feline',about:'about'};
   var tabs=document.getElementById('tabs'), btn=document.getElementById('menuBtn');
   function route(){
     var r=(location.hash||'').slice(1)||'home';
@@ -495,7 +613,7 @@ p{margin:0}
     document.querySelectorAll('.page').forEach(function(p){p.classList.toggle('active',p.id==='page-'+key)});
     document.querySelectorAll('.tabs a[data-route]').forEach(function(a){
       var d=a.dataset.route;
-      var on=(d==='about'&&key==='about')||(d==='work'&&(key==='reel'||key==='feline'||r==='work'))||(d==='home'&&r==='home');
+      var on=(d==='about'&&key==='about')||(d==='work'&&(key==='reel'||key==='civic-jam'||key==='feline'||r==='work'))||(d==='home'&&r==='home');
       if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
     });
     tabs.classList.remove('open');btn.setAttribute('aria-expanded','false');
